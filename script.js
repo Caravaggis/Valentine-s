@@ -4,7 +4,7 @@ const noBtn = document.getElementById("noBtn");
 yesBtn.addEventListener("click", () => {
   document.body.innerHTML = `
     <h1 style="text-align:center; margin-top:40vh;">
-      🌹 You just made me very happy 🌹
+      🌹 LET'S GOOOOOOO  😁🌹
     </h1>
   `;
 });
