@@ -137,3 +137,11 @@ button {
   opacity: 0.85;
   font-weight: 400;
 }
+
+#yesBtn .subtext {
+  opacity: 0.9;
+}
+
+#noBtn .subtext {
+  opacity: 0.7;
+}
