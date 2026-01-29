@@ -131,3 +131,9 @@ button {
   transform: translateY(-1px);
   background: rgba(0,0,0,0.35);
 }
+
+.subtext {
+  font-size: 0.75em;     /* smaller than YES/NO */
+  opacity: 0.85;
+  font-weight: 400;
+}
