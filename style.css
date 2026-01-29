@@ -1,35 +1,133 @@
+:root{
+  --pink1:#ff6fae;
+  --pink2:#ffb3d5;
+  --bg1:#14001f;
+  --bg2:#2a0038;
+  --card: rgba(255,255,255,0.10);
+  --border: rgba(255,255,255,0.20);
+}
+
+* { box-sizing: border-box; }
+
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   height: 100vh;
+  margin: 0;
+
+  /* Romantic background */
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255,111,174,0.35), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(255,179,213,0.25), transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(255,111,174,0.18), transparent 55%),
+    linear-gradient(135deg, var(--bg1), var(--bg2));
+
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+  overflow: hidden;
+}
+
+/* Cute floating hearts */
+body::before, body::after{
+  content:"";
+  position: absolute;
+  inset: -200px;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(255,182,193,0.35) 0 2px, transparent 3px),
+    radial-gradient(circle at 30% 70%, rgba(255,182,193,0.28) 0 2px, transparent 3px),
+    radial-gradient(circle at 60% 30%, rgba(255,182,193,0.30) 0 2px, transparent 3px),
+    radial-gradient(circle at 80% 60%, rgba(255,182,193,0.22) 0 2px, transparent 3px);
+  filter: blur(0.2px);
+  opacity: 0.9;
+  animation: floaty 10s ease-in-out infinite;
+}
+
+body::after{
+  opacity: 0.6;
+  animation-duration: 14s;
+  transform: rotate(8deg);
+}
+
+@keyframes floaty{
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(18px); }
 }
 
 .card {
-  background: rgba(0,0,0,0.7);
-  padding: 2rem;
-  border-radius: 15px;
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  padding: 2.2rem 2rem;
+  border-radius: 22px;
   text-align: center;
-  max-width: 400px;
+  max-width: 520px;
+  width: min(92vw, 520px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
 }
 
+h1{
+  margin: 0 0 0.6rem 0;
+  font-size: 1.7rem;
+  letter-spacing: 0.2px;
+}
+
+p{
+  margin: 0 0 1.4rem 0;
+  opacity: 0.92;
+}
+
+.buttons{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Base button style */
 button {
-  margin: 10px;
-  padding: 12px 20px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.25);
+  color: white;
+  padding: 12px 18px;
   font-size: 1rem;
-  border: none;
-  border-radius: 8px;
+  border-radius: 14px;
   cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
 }
 
-#yesBtn {
-  background: #ff6f91;
+/* YES: larger + soft glow */
+#yesBtn{
+  font-size: 1.05rem;
+  padding: 16px 26px;
+  min-width: 220px;
+  background: linear-gradient(135deg, var(--pink1), var(--pink2));
+  border: 0;
+  box-shadow:
+    0 10px 30px rgba(255,111,174,0.35),
+    0 0 22px rgba(255,111,174,0.50);
 }
 
-#noBtn {
-  background: #444;
+#yesBtn:hover{
+  transform: translateY(-2px) scale(1.02);
+  box-shadow:
+    0 14px 40px rgba(255,111,174,0.45),
+    0 0 30px rgba(255,111,174,0.65);
 }
 
+#yesBtn:active{
+  transform: translateY(0) scale(0.99);
+}
+
+/* NO: smaller + muted */
+#noBtn{
+  opacity: 0.9;
+  padding: 12px 18px;
+}
+
+#noBtn:hover{
+  transform: translateY(-1px);
+  background: rgba(0,0,0,0.35);
+}
