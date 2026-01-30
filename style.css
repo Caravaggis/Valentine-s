@@ -66,6 +66,7 @@ body::after{
   max-width: 520px;
   width: min(92vw, 520px);
   box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  z-index: 2;
 }
 
 h1{
@@ -151,6 +152,7 @@ button {
 /* Japanese sakura-style background decorations */
 body::before,
 body::after {
+  z-index: 0;
   content: "";
   position: fixed;
   inset: -200px;
