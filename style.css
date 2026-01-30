@@ -42,33 +42,6 @@ body {
     url("https://upload.wikimedia.org/wikipedia/commons/3/3f/Japanese_pagoda_silhouette.svg") right 20px bottom 20px / 200px no-repeat;
 }
 
-/* Cute floating hearts */
-/* body::before, body::after{
-  content:"";
-  position: absolute;
-  inset: -200px;
-  pointer-events: none;
-  background-image:
-    radial-gradient(circle at 10% 20%, rgba(255,182,193,0.35) 0 2px, transparent 3px),
-    radial-gradient(circle at 30% 70%, rgba(255,182,193,0.28) 0 2px, transparent 3px),
-    radial-gradient(circle at 60% 30%, rgba(255,182,193,0.30) 0 2px, transparent 3px),
-    radial-gradient(circle at 80% 60%, rgba(255,182,193,0.22) 0 2px, transparent 3px);
-  filter: blur(0.2px);
-  opacity: 0.9;
-  animation: floaty 10s ease-in-out infinite;
-}
-
-body::after{
-  opacity: 0.6;
-  animation-duration: 14s;
-  transform: rotate(8deg);
-}
-
-@keyframes floaty{
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(18px); }
-} */
-
 .card {
   position: relative;
   background: var(--card);
