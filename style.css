@@ -233,11 +233,11 @@ body::after {
   background: rgba(255, 182, 193, 0.9);
   pointer-events: none;
   z-index: 9999;
-  animation: fall 1.6s linear forwards, sway 1.6s ease-in-out forwards;
+  animation: fall 4.5s linear forwards, sway 4.5s ease-in-out forwards;
 }
 
 @keyframes fall {
-  to { transform: translateY(110vh) rotate(240deg); opacity: 0; }
+  to { transform: translateY(120vh) rotate(360deg); opacity: 0; }
 }
 
 @keyframes sway {
