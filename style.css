@@ -14,19 +14,6 @@ body {
   height: 100vh;
   margin: 0;
 
-  /* Japanese structure silhouettes */
-.bg-structures {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.12;
-  background:
-    url("https://upload.wikimedia.org/wikipedia/commons/6/6d/Torii_gate_silhouette.svg") left bottom / 180px no-repeat,
-    url("https://upload.wikimedia.org/wikipedia/commons/3/3f/Japanese_pagoda_silhouette.svg") right bottom / 200px no-repeat;
-}
-
-
   /* Romantic background */
   background:
     radial-gradient(circle at 20% 15%, rgba(255,111,174,0.35), transparent 40%),
@@ -39,6 +26,18 @@ body {
   justify-content: center;
   color: white;
   overflow: hidden;
+}
+
+/* Japanese structure silhouettes */
+.bg-structures {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;          /* behind the card, above background */
+  opacity: 0.18;
+  background:
+    url("https://upload.wikimedia.org/wikipedia/commons/6/6d/Torii_gate_silhouette.svg") left 20px bottom 20px / 180px no-repeat,
+    url("https://upload.wikimedia.org/wikipedia/commons/3/3f/Japanese_pagoda_silhouette.svg") right 20px bottom 20px / 200px no-repeat;
 }
 
 /* Cute floating hearts */
