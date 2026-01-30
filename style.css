@@ -309,3 +309,11 @@ body::after {
   transform: rotate(14deg);
 }
 
+.buttons::before {
+  content: "🌸 🌸";
+  display: block;
+  text-align: center;
+  margin-bottom: 6px;
+  opacity: 0.8;
+}
+
