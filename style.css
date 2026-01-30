@@ -245,3 +245,31 @@ body::after {
   50%  { margin-left: 40px; }
   100% { margin-left: -25px; }
 }
+
+.yes-text {
+  position: relative;
+  z-index: 2; /* above petals + heart */
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: white;
+  text-align: center;
+  text-shadow:
+    0 0 12px rgba(255, 182, 193, 0.8),
+    0 0 24px rgba(255, 111, 174, 0.6);
+  animation: hypePop 0.8s ease-out forwards;
+}
+
+@keyframes hypePop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
