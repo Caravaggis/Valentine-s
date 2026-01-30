@@ -150,7 +150,7 @@ body::after {
     radial-gradient(circle at 80% 60%, rgba(255,192,203,0.28) 0 2px, transparent 3px),
     radial-gradient(circle at 50% 80%, rgba(255,182,193,0.22) 0 2px, transparent 3px);
   animation: sakuraFloat 18s linear infinite;
-  opacity: 0.45;
+  opacity: 0.9;
 }
 
 body::after {
