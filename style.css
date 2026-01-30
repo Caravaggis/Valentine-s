@@ -180,3 +180,59 @@ body::after {
   }
 }
 
+/* Art-only YES screen */
+.yes-screen {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255,182,193,0.35), transparent 45%),
+    radial-gradient(circle at 70% 80%, rgba(255,192,203,0.30), transparent 50%),
+    linear-gradient(135deg, #1b0026, #3a003f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Soft glowing heart aura */
+.yes-screen::before {
+  content: "❤";
+  position: absolute;
+  font-size: 8rem;
+  opacity: 0.12;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.12; }
+  50% { transform: scale(1.1); opacity: 0.18; }
+}
+
+/* Art-only YES screen */
+.yes-screen {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255,182,193,0.35), transparent 45%),
+    radial-gradient(circle at 70% 80%, rgba(255,192,203,0.30), transparent 50%),
+    linear-gradient(135deg, #1b0026, #3a003f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Soft glowing heart aura */
+.yes-screen::before {
+  content: "❤";
+  position: absolute;
+  font-size: 8rem;
+  opacity: 0.12;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.12; }
+  50% { transform: scale(1.1); opacity: 0.18; }
+}
+
