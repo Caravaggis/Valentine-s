@@ -5,6 +5,17 @@ const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 
+function sakuraBurst(count = 22) {
+  for (let i = 0; i < count; i++) {
+    const petal = document.createElement("div");
+    petal.className = "petal";
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.animationDelay = Math.random() * 0.3 + "s";
+    document.body.appendChild(petal);
+    setTimeout(() => petal.remove(), 1800);
+  }
+}
+
 // YES behavior (keep yours or customize)
 yesBtn.addEventListener("click", () => {
   document.body.innerHTML = `
