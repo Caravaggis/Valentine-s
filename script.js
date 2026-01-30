@@ -20,8 +20,12 @@ yesBtn.addEventListener("click", () => {
 
   setTimeout(() => {
     // Switch to art-only heart screen
-    document.body.innerHTML = `<div class="yes-screen" id="yesScreen"></div>`;
-
+   document.body.innerHTML = `
+      <div class="yes-screen" id="yesScreen">
+        <div class="yes-text">LET’S GOOOOOOOOOOO</div>
+      </div>
+    `;
+    
     // Continuous gentle petals while the heart is showing
     const intervalId = setInterval(() => sakuraBurst(6), 450);
 
