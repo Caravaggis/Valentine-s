@@ -221,3 +221,25 @@ body::after {
   justify-content: center;
   overflow: hidden;
 }
+
+.petal {
+  position: fixed;
+  top: -20px;
+  width: 14px;
+  height: 10px;
+  border-radius: 60% 40% 60% 40%;
+  background: rgba(255, 182, 193, 0.9);
+  pointer-events: none;
+  z-index: 9999;
+  animation: fall 1.6s linear forwards, sway 1.6s ease-in-out forwards;
+}
+
+@keyframes fall {
+  to { transform: translateY(110vh) rotate(240deg); opacity: 0; }
+}
+
+@keyframes sway {
+  0%   { margin-left: 0px; }
+  50%  { margin-left: 40px; }
+  100% { margin-left: -25px; }
+}
