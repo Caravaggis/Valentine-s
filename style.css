@@ -30,6 +30,8 @@ body {
 
 /* Japanese structure silhouettes */
 .bg-structures {
+  outline: 3px solid lime;
+  background-color: rgba(0,255,0,0.08);
   position: fixed;
   inset: 0;
   pointer-events: none;
