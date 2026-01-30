@@ -9,20 +9,27 @@ function sakuraBurst(count = 22) {
     petal.style.left = Math.random() * 100 + "vw";
     petal.style.animationDelay = Math.random() * 0.3 + "s";
     document.body.appendChild(petal);
-    setTimeout(() => petal.remove(), 1800);
+    setTimeout(() => petal.remove(), 5200);
   }
 }
 
 /* --- YES behavior (use art-only screen OR text screen) --- */
 yesBtn.addEventListener("click", () => {
-  // petals first
-  sakuraBurst(28);
+  // Big initial burst
+  sakuraBurst(40);
 
-  // then switch screen (ART-ONLY)
   setTimeout(() => {
-    document.body.innerHTML = `<div class="yes-screen"></div>`;
+    // Switch to art-only heart screen
+    document.body.innerHTML = `<div class="yes-screen" id="yesScreen"></div>`;
+
+    // Continuous gentle petals while the heart is showing
+    const intervalId = setInterval(() => sakuraBurst(6), 450);
+
+    // Stop after 12 seconds (so it doesn’t run forever)
+    setTimeout(() => clearInterval(intervalId), 12000);
   }, 250);
 });
+
 
 /* --- NO button dodges (mobile-friendly) --- */
 noBtn.style.position = "relative";
